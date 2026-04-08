@@ -234,4 +234,9 @@ input,select{
 @media(max-width:640px){
   h1{font-size:24px}
   h2{font-size:20px}
+
+.tod-screen[data-step="1"] .tod-actions{
+  margin-top:0 !important;
+  transform:translateY(-35px);
+}
 }

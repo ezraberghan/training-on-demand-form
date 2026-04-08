@@ -46,4 +46,13 @@
 .tod-summary-card p{color:var(--muted);line-height:1.7;margin:10px 0 0}
 .tod-summary-list{margin:16px 0 0;padding-left:18px;color:var(--muted);line-height:1.8}
 .tod-summary-footer{margin-top:18px;color:var(--muted-2);font-size:13px;line-height:1.7}
-@media (max-width:640px){.tod-plan-shell{padding:50px 16px 24px}.tod-actions{flex-direction:column-reverse;gap:10px}.tod-btn{width:100%}.tod-progress-meta{font-size:12px}}
+@media (max-width:640px){
+  .tod-plan-shell{padding:50px 16px 24px}
+  .tod-actions{flex-direction:column-reverse;gap:10px}
+  .tod-btn{width:100%}
+  .tod-progress-meta{font-size:12px}
+
+  .tod-screen[data-step="1"] .tod-actions{
+    transform:translateY(-80px);
+  }
+}

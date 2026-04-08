@@ -53,6 +53,10 @@
   .tod-progress-meta{font-size:12px}
 
   .tod-screen[data-step="1"] .tod-actions{
-    transform:translateY(-80px);
+    margin-top:auto !important;
+    padding-top:0 !important;
+    position:relative !important;
+    top:-100px !important;
+    transform:none !important;
   }
 }

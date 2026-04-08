@@ -235,13 +235,8 @@ input,select{
   h1{font-size:24px}
   h2{font-size:20px}
 
-  .tod-screen[data-step="1"]{
-    justify-content:flex-start !important;
-    padding-bottom:40px !important;
-  }
-
   .tod-screen[data-step="1"] .tod-actions{
-    margin-top:40px !important;
-    transform:none !important;
+    margin-top:0 !important;
+    transform:translateY(-35px);
   }
 }

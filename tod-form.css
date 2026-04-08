@@ -1,242 +1,48 @@
-/* RESET */
-*{box-sizing:border-box;margin:0;padding:0}
-
-/* MAIN WRAPPER */
-.tod-plan-shell{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  color:#fff;
-  max-width:640px;
-  margin:0 auto;
-}
-
-/* PROGRESS */
-.tod-progress-shell{
-  margin-bottom:24px;
-}
-.tod-progress-meta{
-  display:flex;
-  justify-content:space-between;
-  font-size:12px;
-  color:#aaa;
-  margin-bottom:6px;
-}
-.tod-progress-bar{
-  width:100%;
-  height:4px;
-  background:#222;
-  border-radius:2px;
-}
-.tod-progress-fill{
-  height:100%;
-  width:0%;
-  background:#d4af37;
-  border-radius:2px;
-  transition:width .3s ease;
-}
-
-/* SCREEN */
-.tod-screen{
-  display:none;
-  flex-direction:column;
-  min-height:65vh;
-}
-.tod-screen.active{
-  display:flex;
-}
-
-/* 🔥 FIRST SCREEN SPACING FIX */
-.tod-screen[data-step="1"]{
-  padding-top:clamp(60px,10vh,120px);
-  padding-bottom:20vh;
-}
-.tod-screen[data-step="1"] .tod-actions{
-  margin-top:auto;
-}
-
-/* TYPOGRAPHY */
-.tod-eyebrow{
-  font-size:12px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  color:#aaa;
-  margin-bottom:12px;
-}
-h1{
-  font-size:28px;
-  font-weight:600;
-  margin-bottom:16px;
-}
-h2{
-  font-size:22px;
-  font-weight:600;
-  margin-bottom:12px;
-}
-.tod-lead{
-  font-size:15px;
-  color:#ccc;
-  margin-bottom:20px;
-}
-.tod-copy{
-  font-size:14px;
-  color:#aaa;
-  margin-bottom:20px;
-}
-
-/* PILLS */
-.tod-pill-row{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:24px;
-}
-.tod-pill{
-  font-size:12px;
-  background:#111;
-  border:1px solid #222;
-  padding:6px 10px;
-  border-radius:999px;
-}
-
-/* BUTTONS */
-.tod-actions{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-top:24px;
-}
-.tod-btn{
-  border:none;
-  border-radius:8px;
-  padding:12px 18px;
-  font-size:14px;
-  cursor:pointer;
-}
-.tod-btn-primary{
-  background:#d4af37;
-  color:#000;
-}
-.tod-btn-secondary{
-  background:#111;
-  color:#fff;
-  border:1px solid #333;
-}
-
-/* GOAL CARDS */
-.tod-choices{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.tod-choice{
-  text-align:left;
-  padding:16px;
-  border-radius:10px;
-  background:#111;
-  border:1px solid #222;
-  cursor:pointer;
-  transition:.2s;
-}
-.tod-choice:hover{
-  border-color:#d4af37;
-}
-.tod-choice.selected{
-  border-color:#d4af37;
-  background:#161616;
-}
-.tod-choice-title{
-  font-weight:600;
-  margin-bottom:4px;
-}
-.tod-choice-copy{
-  font-size:13px;
-  color:#aaa;
-}
-
-/* FIELDS */
-.tod-field-stack{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-.tod-field label{
-  display:block;
-  font-size:13px;
-  margin-bottom:6px;
-}
-input,select{
-  width:100%;
-  padding:12px;
-  border-radius:8px;
-  border:1px solid #333;
-  background:#0f0f0f;
-  color:#fff;
-  font-size:14px;
-}
-
-/* MULTI SELECT */
-.tod-multiselect{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-.tod-check{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  font-size:13px;
-  background:#111;
-  border:1px solid #333;
-  padding:6px 10px;
-  border-radius:6px;
-}
-.tod-check input{
-  accent-color:#d4af37;
-}
-
-/* NOTES */
-.tod-inline-note{
-  font-size:12px;
-  color:#777;
-  margin-top:12px;
-}
-
-/* SUMMARY */
-.tod-summary-stack{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-.tod-summary-card{
-  background:#111;
-  border:1px solid #222;
-  border-radius:12px;
-  padding:18px;
-}
-.tod-summary-card h3{
-  margin-bottom:10px;
-}
-.tod-summary-list{
-  margin-bottom:10px;
-  padding-left:16px;
-}
-.tod-summary-list li{
-  margin-bottom:6px;
-  font-size:13px;
-  color:#ccc;
-}
-.tod-summary-footer{
-  font-size:12px;
-  color:#888;
-  margin-top:10px;
-}
-
-/* MOBILE */
-@media(max-width:640px){
-  h1{font-size:24px}
-  h2{font-size:20px}
-
-  .tod-screen[data-step="1"] .tod-actions{
-    margin-top:0 !important;
-    transform:translateY(-35px);
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.tod-plan-builder,.tod-plan-builder *{box-sizing:border-box}
+.tod-plan-builder{--panel:#121212;--panel-2:#171717;--panel-3:#1d1d1d;--text:#f5f1e9;--muted:#b8afa2;--muted-2:#938a7c;--accent:#c7a35e;--accent-2:#e3c386;--line:rgba(199,163,94,.18);--line-2:rgba(255,255,255,.08);--success:#d4ba84;--shadow:0 24px 80px rgba(0,0,0,.4);width:100%;max-width:860px;margin:0 auto;border:1px solid var(--line);background:#050505;border-radius:28px;box-shadow:var(--shadow);overflow:hidden;color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;display:flex;flex-direction:column}
+.tod-plan-shell{padding:50px 22px 28px;display:flex;flex-direction:column;flex:1}
+.tod-progress-shell{display:grid;gap:12px;margin-bottom:24px}
+.tod-progress-meta{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted-2);font-size:13px}
+.tod-progress-bar{height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.04)}
+.tod-progress-fill{width:0;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width .35s ease}
+.tod-screen{display:none;animation:todFade .25s ease;min-height:0}
+.tod-screen.active{display:flex;flex-direction:column;flex:1}
+@keyframes todFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.tod-eyebrow{text-transform:uppercase;letter-spacing:.13em;color:var(--accent);font-size:12px;font-weight:800;margin-bottom:10px}
+.tod-plan-builder h1,.tod-plan-builder h2,.tod-plan-builder h3{margin:0;line-height:.95;font-weight:400;color:var(--text);text-transform:uppercase;letter-spacing:.02em;font-family:'Bebas Neue',sans-serif}
+.tod-plan-builder h1{font-size:clamp(30px,5vw,44px)}
+.tod-plan-builder h2{font-size:clamp(24px,4vw,34px)}
+.tod-plan-builder h3{font-size:18px}
+.tod-lead,.tod-copy{color:var(--muted);line-height:1.7;font-size:16px;margin-top:12px;max-width:720px}
+.tod-pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.tod-pill{border:1px solid var(--line);background:rgba(199,163,94,.08);color:var(--success);padding:9px 12px;border-radius:999px;font-size:13px;font-weight:700}
+.tod-helper,.tod-inline-note{color:var(--muted-2);font-size:13px}
+.tod-helper{margin-top:18px;line-height:1.6}
+.tod-inline-note{margin-top:10px}
+.tod-question-counter{margin-top:18px;color:var(--muted-2);font-size:13px;font-weight:700}
+.tod-choices,.tod-field-stack,.tod-summary-stack{display:grid;gap:14px;margin-top:28px}
+.tod-choice{border:1px solid var(--line-2);background:linear-gradient(180deg,var(--panel),var(--panel-2));color:var(--text);width:100%;text-align:left;border-radius:16px;padding:18px;cursor:pointer;transition:.22s ease}
+.tod-choice:hover{border-color:rgba(255,255,255,.2);background:linear-gradient(180deg,#161616,#1a1a1a);transform:translateY(-1px)}
+.tod-choice.selected{border-color:#ff3b3b;background:linear-gradient(180deg,#171717,var(--panel-3));transform:translateY(-1px)}
+.tod-choice-title{font-size:16px;font-weight:700;margin-bottom:6px}
+.tod-choice-copy{color:var(--muted);font-size:14px;line-height:1.55}
+.tod-field{display:grid;gap:8px}
+.tod-field label{font-size:14px;font-weight:700;color:var(--text)}
+.tod-plan-builder select,.tod-plan-builder input,.tod-plan-builder textarea{width:100%;border-radius:14px;border:1px solid var(--line-2);background:#141414;color:var(--text);padding:14px 16px;outline:none;font-size:15px;font-family:inherit;transition:border-color .2s ease,background .2s ease}
+.tod-plan-builder select:focus,.tod-plan-builder input:focus,.tod-plan-builder textarea:focus{border-color:rgba(199,163,94,.45);background:#181818}
+.tod-plan-builder input::placeholder,.tod-plan-builder textarea::placeholder{color:#857b6d}
+.tod-multiselect{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tod-check{display:flex;align-items:center;gap:10px;border-radius:14px;border:1px solid var(--line-2);background:#141414;padding:12px 14px}
+.tod-check input{width:auto;margin:0}
+.tod-check span{font-size:14px;color:var(--text)}
+.tod-actions{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;margin-top:auto;padding-top:20px}
+.tod-btn{appearance:none;border:0;border-radius:14px;padding:14px 18px;font-size:15px;font-weight:800;cursor:pointer;transition:.2s ease;min-width:148px}
+.tod-btn:hover{transform:translateY(-1px)}
+.tod-btn-primary{background:linear-gradient(180deg,var(--accent-2),var(--accent));color:#111}
+.tod-btn-secondary{background:transparent;border:1px solid var(--line-2);color:var(--muted)}
+.tod-summary-card{border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));padding:20px}
+.tod-summary-card p{color:var(--muted);line-height:1.7;margin:10px 0 0}
+.tod-summary-list{margin:16px 0 0;padding-left:18px;color:var(--muted);line-height:1.8}
+.tod-summary-footer{margin-top:18px;color:var(--muted-2);font-size:13px;line-height:1.7}
+@media (max-width:640px){.tod-plan-shell{padding:50px 16px 24px}.tod-actions{flex-direction:column-reverse;gap:10px}.tod-btn{width:100%}.tod-progress-meta{font-size:12px}}
